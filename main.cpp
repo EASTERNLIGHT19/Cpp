@@ -17,11 +17,8 @@ enter the two integers and operators : 9 7 (
 unknown operator
 ...
 이런 식으로 반복이 됩니다.
-
-
-
-
 */
+
 int main(int argc, char *argv[]){
 Add a;
 Sub s;
@@ -35,30 +32,29 @@ std::cout<<"enter the two integers and operators : ";
 
 std::cin>>x>>y>>c;
 
-
 if(c=='+'){
-    a.setValue(x,y);
-    std::cout<<a.calculate()<<std::endl;
+a.setValue(x,y);
+std::cout<<a.calculate()<<std::endl;
 }
+    
 if(c=='*'){
 m.setValue(x,y);
 std::cout<<m.calculate()<<std::endl;
 }
-if(c=='/')
-{
+    
+if(c=='/'){
 d.setValue(x,y);
 std::cout<<d.calculate()<<std::endl;
+}
 
+if(c=='-'){
+s.setValue(x,y);
+std::cout<<s.calculate()<<std::endl;
 }
-if(c=='-')
-{
-    s.setValue(x,y);
-   std::cout<<s.calculate()<<std::endl;
-}
+    
 else{
     std::cout<<"unknown operator"<<std::endl;
     continue;
-    
 }
 }
 }
